@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+body, html, #root, .App{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F2E3D5;
+  font-family: 'Poppins', sans-serif;
+} 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-container{
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+}
+.home-container a{
+  width: 20%;
+  background-color: #3CA6A6;
+  margin: 0 4vh;
+  font-size: 5vh;
+  text-decoration: none;
+  color: #F2E3D5;
+  padding: 3vh;
+  text-align: center;
+  border-radius: 5px;
+}
+.link-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main-title{
+  font-size: 7vh;
+  color: #3CA6A6;
+  margin-bottom: 10vh;
+  font-weight: 600;
+}
+.plan-container{
+  width: 100%;
+  
+
+}
+.main-plan-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.btn-map-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 50%;
+}
+.btn-map{
+  background-color: #3CA6A6;
+  color: #F2E3D5;
+  border-radius: 5px;
+  padding: 1vh;
+  font-size: 2vh;
+  width: 40%;
+  margin: 1vh 0;
+  text-align: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.active{
+  background-color: #026773;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+path{
+  cursor: pointer;
+}
+
+
+.retour-btn{
+  font-size: 3vh;
+  background-color: #3CA6A6;
+  padding: 1vh 2vh;
+  border-radius: 3px;
+  width: fit-content;
+  margin: 2% 0 0 2%;
+  cursor: pointer;
+  transition: all 0.2s ;
+}
+.retour-btn:hover{
+  transform: scale(1.1);
 }
