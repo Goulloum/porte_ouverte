@@ -95,12 +95,36 @@ path{
   justify-content: center;
   align-items: center;
   width: 50%;
+  position: relative;
 }
 #svg1651{
-  background-color: whitesmoke;
   padding: 2vh;
   border: 2px black solid;
   margin-top: 2%;
-
+  background-image: url('./background-svg.png');
+  
 }
 
+#svg1651 path{
+  stroke-width: 10px;
+  border-radius: 20px;
+  fill: black;
+  filter: blur(5px);
+  opacity: 0;
+}
+.entree-plan{
+  position: absolute;
+  background-color: rgb(192, 0, 0);
+  width: 8vh;
+  height: 8vh;
+  z-index: 4;
+  right: 7%;
+  top: 10%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1vh;
+}
