@@ -1,5 +1,4 @@
 import Home from './Components/Home';
-import Information from './Components/Information';
 import Plan from './Components/Plan';
 import Enregistrer from './Components/Enregistrer';
 import './App.css';
@@ -17,9 +16,6 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Home />
-          </Route>
-          <Route path='/Information'>
-            <Information />
           </Route>
           <Route path='/Plan'>
             <Plan />
