@@ -17,6 +17,7 @@ function Plan(){
         }
     }
 
+
     /*
 
     <svg height="584" width="640" viewBox="0 0 640 584">
@@ -44,22 +45,20 @@ function Plan(){
             <div className="main-plan-container">
                 <div className="map-svg-container">
                 <svg xmlns="http://www.w3.org/2000/svg" id="svg1651" width="512" height="759.46667" viewBox="0 0 512 759.46667">
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Les Saintes"? "red": "#77bb41"}} title='Les Saintes' d="m 128.42938,76.074493 h 187.5946 V 169.11604 H 126.47542 Z" id="path2530"/>
-                    <text><textPath xlinkHref="#path2530">Les Saintes</textPath></text>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Salle serveur"? "red": "#fe0101"}} title='Salle serveur' d="M 198.30241,1.0825401 V 38.036038 h 82.50152 V 0.59621949 Z" id="path2565"/>
-                    <text><textPath xlinkHref="#path2565">Salle serveur</textPath></text>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Pédagogie Stéphanie"? "red": "#0056d6"}} title='Pédagogie Stéphanie' d="m 415.8752,156.54321 v 62.59636 h 95.27176 v -59.90812 z" id="path2567"/>
-                    <text><textPath xlinkHref="#path2567">Pédagogie Stéphanie</textPath></text>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Direction"? "red": "#0056d6"}} title='Direction' d="m 414.86321,286.4525 h 92.65978 V 226.803 h -93.34796 z" id="path2569"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Bureau service commercial"? "red": "#0056d6"}} title='Bureau service commercial' d="m 417.30515,559.37683 h 95.19388 V 292.85591 h -96.15568 z" id="path2571"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Guadeloupe"? "red": "#fffc41"}} title="Guadeloupe" d="M 123.0445,4.8059221 V 206.91284 H 0.89791976 V 4.5853004 Z" id="path2573"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Marie-Galante"? "red": "#ff6251"}} title='Marie-Galante' d="M 349.67409,175.88199 H 128.89726 v 114.1523 h 220.79627 z" id="path2575"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Désirade"? "red": "#be38f3"}} title='Désirade' d="M 347.2785,419.09143 H 127.34539 V 293.96517 h 221.81924 z" id="path2577"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Martinique"? "red": "#ffaa00"}} title='Martinique' d="M -0.08353636,420.01621 H 124.53305 V 210.17224 H 1.1535817 Z" id="path2579"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Support informatique"? "red": "#0056d6"}} title='Support informatique' d="M 83.715516,501.91172 H 190.0048 V 428.41587 H 82.056597 Z" id="path2581"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Corse"? "red": "#b1dd8c"}} title='Corse' d="M 375.27103,501.40204 V 428.83871 H 197.45239 v 74.15212 z" id="path2583"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Grande salle"? "red": "#53d5fd"}} title='Grande salle' d="M 331.62903,628.69767 V 760.22663 H 87.709801 v -132.6196 z" id="path2585"/>
-                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Espace formatteur"? "red": "#0056d6"}} title='Espace formatteur' d="M 80.291624,534.07316 V 760.68419 H 5.2682554 V 535.25382 Z" id="path2587"/>
+
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Les Saintes"? "red": "none"}} title='Les Saintes' d="m 128.42938,76.074493 h 187.5946 V 169.11604 H 126.47542 Z" id="path2530"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Salle serveur"? "red": "none"}} title='Salle serveur' d="M 198.30241,1.0825401 V 38.036038 h 82.50152 V 0.59621949 Z" id="path2565"/>         
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Pédagogie Stéphanie"? "red": "none"}} title='Pédagogie Stéphanie' d="m 415.8752,156.54321 v 62.59636 h 95.27176 v -59.90812" id="path2567"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Direction"? "red": "none"}} title='Direction' d="m 414.86321,286.4525 h 92.65978 V 226.803 h -93.34796 z" id="path2569"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Bureau service commercial"? "red": "none"}} title='Bureau service commercial' d="m 417.30515,559.37683 h 95.19388 V 292.85591 h -96.15568 z" id="path2571"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Guadeloupe"? "red": "none"}} title="Guadeloupe" d="M 123.0445,4.8059221 V 206.91284 H 0.89791976 V 4.5853004 Z" id="path2573"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Marie-Galante"? "red": "none"}} title='Marie-Galante' d="M 349.67409,175.88199 H 128.89726 v 114.1523 h 220.79627 z" id="path2575"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Désirade"? "red": "none"}} title='Désirade' d="M 347.2785,419.09143 H 127.34539 V 293.96517 h 221.81924 z" id="path2577"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Martinique"? "red": "none"}} title='Martinique' d="M -0.08353636,420.01621 H 124.53305 V 210.17224 H 1.1535817 Z" id="path2579"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Support informatique"? "red": "none"}} title='Support informatique' d="M 83.715516,501.91172 H 190.0048 V 428.41587 H 82.056597 Z" id="path2581"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Corse"? "red": "none"}} title='Corse' d="M 375.27103,501.40204 V 428.83871 H 197.45239 v 74.15212 z" id="path2583"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Grande salle"? "red": "none"}} title='Grande salle' d="M 331.62903,628.69767 V 760.22663 H 87.709801 v -132.6196 z" id="path2585"/>
+                    <path onClick={(e) => handleClick(e)} style={{fill: highlighted === "Espace formatteur"? "red": "none"}} title='Espace formatteur' d="M 80.291624,534.07316 V 760.68419 H 5.2682554 V 535.25382 Z" id="path2587"/>
                 </svg>
                 </div>
                 <div className="btn-map-container">

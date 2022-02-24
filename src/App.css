@@ -104,9 +104,3 @@ path{
 
 }
 
-#path2530::after{
-  content: "TEST";
-  font-size: 3vh;
-  color: black;
-  
-}
