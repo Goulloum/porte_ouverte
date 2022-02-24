@@ -5,6 +5,7 @@ body, html, #root, .App{
   padding: 0;
   background-color: #F2E3D5;
   font-family: 'Poppins', sans-serif;
+  user-select: none;
 } 
 
 .home-container{
@@ -88,4 +89,24 @@ path{
 }
 .retour-btn:hover{
   transform: scale(1.1);
+}
+.map-svg-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#svg1651{
+  background-color: whitesmoke;
+  padding: 2vh;
+  border: 2px black solid;
+  margin-top: 2%;
+
+}
+
+#path2530::after{
+  content: "TEST";
+  font-size: 3vh;
+  color: black;
+  
 }
