@@ -110,3 +110,86 @@ path{
   color: black;
   
 }
+
+
+
+/* |==== { Components Enregistrer } ====| */
+
+h4 {
+    text-align:center;
+    font-size: 34px;
+}
+
+.Container_Enregistrement{
+    font-size: 24px;
+    width: 100%;
+    height: 30vh;
+    margin-top: 5%;
+    position: relative;
+}
+
+.Bandeau {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center url("./img/Bandeau.png");
+    background-size: cover;
+}
+
+.Container_Formulaire {
+    width: 100%;
+    height: 50vh;
+    border: solid 2px #3CA6A6;
+}
+
+
+.Debut_Formulaire {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Option_formation {
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+}
+
+.Part1 {
+    margin-left: 15%;
+    margin-bottom: 2%;
+    width: 100%;
+    display: flex;
+}
+
+.Part2 {
+    width: 100%;
+    display: flex;
+}
+
+
+.Box_Checkbox {
+    margin-left: 3%;
+}
+
+.Milieu_Formulaire{
+    width: 100%;
+
+    border: solid 2px red;
+}
+/* |==== { Body Scroll bar } ====| */
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+    border-radius: 10px;
+    background-color: #CCCCCC;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #CCC;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #3CA6A6;
+    background-image: -webkit-linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent)
+}
