@@ -1,22 +1,20 @@
-
-import Bandeau_Enregistrement from '../img/Bandeau.png';
-
-import {useHistory} from 'react-router-dom';
+ï»¿
+import { useHistory } from 'react-router-dom';
 
 /************************************************************************
- *                      Droits réservés à nous même  :)                 *
+ *                      Droits rÃ©servÃ©s Ã  nous mÃªme  :)                 *
  *                                                                      *
  *  - Mathieu                                                           * 
  *  - Antoine                                                           *
- *  - Rémy                                                              *
+ *  - RÃ©my                                                              *
  *                                                                      *
  * **********************************************************************/
 
 
-function Enregistrer(){
+function Enregistrer() {
 
     const history = useHistory();
-    return(
+    return (
         <div className="enregistrer-container">
             <div className="retour-btn" onClick={() => history.goBack()}>Retour</div>
 
@@ -26,7 +24,7 @@ function Enregistrer(){
 
                 <div className="Container_Formulaire">
 
-                    <h4>Les formations qui m'interesse :</h4>
+                    <h4>Les formations qui m'interessent :</h4>
 
                     <div className="Debut_Formulaire">
 
@@ -70,39 +68,66 @@ function Enregistrer(){
 
                     <div className="Milieu_Formulaire">
 
-                        <div className="Box_Informations">
-                            <label>Nom : </label>
-                            <input type="text" id="Nom" name="Nom" />
-                        </div>
+                        <div className="PartM1">
 
-                        <div className="Box_Informations">
-                            <label>Prénom : </label>
-                            <input type="text" id="Prenom" name="Prenom" />
-                        </div>
+                            <div className="Box_Informations">
+                                <label>Nom : </label>
+                                <input type="text" id="Nom" name="Nom" />
+                            </div>
 
-                        <div className="Box_Informations">
-                            <label>Mail : </label>
-                            <input type="text" id="Mail" name="Mail" />
-                        </div>
+                            <div className="Box_Informations">
+                                <label>PrÃ©nom : </label>
+                                <input type="text" id="Prenom" name="Prenom" />
+                            </div>
 
-                        <div className="Box_Informations">
-                            <label>Téléphone : </label>
-                            <input type="text" id="Tel" name="Tel" />
-                        </div>
+                            <div className="Box_Informations">
+                                <label>Mail : </label>
+                                <input type="email" id="Mail" name="Mail" />
+                            </div>
 
-                        <div className="Box_Informations">
-                            <label>Adresse / Ville / CP : </label>
-                            <input type="text" id="Adresse" name="Adresse" />
+                            <div className="Box_Informations">
+                                <label>TÃ©lÃ©phone : </label>
+                                <input type="text" id="Tel" name="Tel" />
+                            </div>
+
+                            <div className="Box_Informations">
+                                <label>Adresse : </label>
+                                <input type="text" id="Adresse" name="Adresse" />
+                            </div>
+
+                            <div className="Box_Informations">
+                                <label>Ville : </label>
+                                <input type="text" id="Ville" name="Ville" />
+                            </div>
+
+                            <div className="Box_Informations">
+                                <label>Code Postal : </label>
+                                <input type="text" id="CP" name="CP" />
+                            </div>
+
                         </div>
 
                     </div>
+
+                    <div className="Fin_Formulaire">
+
+                        <div className="Box_Newsletter">
+                            <input type="checkbox" id="Newsletter" name="Newsletter" />
+                            <label>J'autorise l'ISCIO Ã  utiliser mes informations afin de communiquer avec moi au sujet des inscriptions, <br /> des formations qu'ils proposent et de diverses thÃ©matiques autour de l'apprentissage.</label>
+
+                        </div>
+                    </div>
+
+                    <footer>
+                        ZEUB
+                    </footer>
                 </div>
 
             </div>
 
         </div>
 
-        
+
 
     )
 }
