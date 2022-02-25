@@ -11,10 +11,10 @@ import { useHistory } from 'react-router-dom';
  * **********************************************************************/
 
 
-function Enregistrer(){
+function Enregistrer() {
 
     const history = useHistory();
-    return(
+    return (
         <div className="enregistrer-container">
             <div className="retour-btn" onClick={() => history.goBack()}>Retour</div>
 
@@ -24,7 +24,7 @@ function Enregistrer(){
 
                 <div className="Container_Formulaire">
 
-                    <h4>Les formations qui m'interesse :</h4>
+                    <h4>Les formations qui m'interessent :</h4>
 
                     <div className="Debut_Formulaire">
 
@@ -80,11 +80,6 @@ function Enregistrer(){
                                 <input type="text" id="Prenom" name="Prenom" />
                             </div>
 
-                        </div>
-
-
-                        <div className="PartM2">
-
                             <div className="Box_Informations">
                                 <label>Mail : </label>
                                 <input type="email" id="Mail" name="Mail" />
@@ -94,9 +89,6 @@ function Enregistrer(){
                                 <label>Téléphone : </label>
                                 <input type="text" id="Tel" name="Tel" />
                             </div>
-                        </div>
-
-                        <div className="PartM3">
 
                             <div className="Box_Informations">
                                 <label>Adresse : </label>
@@ -112,16 +104,30 @@ function Enregistrer(){
                                 <label>Code Postal : </label>
                                 <input type="text" id="CP" name="CP" />
                             </div>
+
                         </div>
 
                     </div>
+
+                    <div className="Fin_Formulaire">
+
+                        <div className="Box_Newsletter">
+                            <input type="checkbox" id="Newsletter" name="Newsletter" />
+                            <label>J'autorise l'ISCIO à utiliser mes informations afin de communiquer avec moi au sujet des inscriptions, <br /> des formations qu'ils proposent et de diverses thématiques autour de l'apprentissage.</label>
+
+                        </div>
+                    </div>
+
+                    <footer>
+                        ZEUB
+                    </footer>
                 </div>
 
             </div>
 
         </div>
 
-        
+
 
     )
 }
