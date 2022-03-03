@@ -1,5 +1,6 @@
 import Home from './Components/Home';
 import Plan from './Components/Plan';
+import Excel from './Components/Excel';
 import Enregistrer from './Components/Enregistrer';
 import './App.css';
 
@@ -23,7 +24,9 @@ function App() {
           <Route path='/Enregistrer'>
             <Enregistrer />
           </Route>
-
+          <Route exact path="/Excel">
+            <Excel />
+          </Route>
         </Switch>
       </Router>
       
