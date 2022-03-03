@@ -147,7 +147,7 @@ function Enregistrer() {
 
                 <div className="Bandeau"></div>
 
-                <form onSubmit={(e) => validInput(e)} className="Container_Formulaire">
+                <form autocomplete="off" onSubmit={(e) => validInput(e)} className="Container_Formulaire">
 
                     <h4>Les formations qui m'interessent :</h4>
 
