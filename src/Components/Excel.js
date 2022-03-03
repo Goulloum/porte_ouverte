@@ -26,7 +26,7 @@ function Excel(){
     return(
         <div className="excel-container">
 
-            <CSVLink data={data} className="excel-btn">TELECHARGER LA BASE DE DONNEE EN EXCEL (SIMPLE ET EFFICACE GARANTIE SANS VIRUS)</CSVLink>
+            <CSVLink data={data} className="excel-btn">TELECHARGER LA BASE DE DONNEE EN EXCEL</CSVLink>
         </div>
     )
 }
