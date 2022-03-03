@@ -1,5 +1,4 @@
-﻿
-import { useHistory } from 'react-router-dom';
+﻿import { useHistory } from 'react-router-dom';
 
 /************************************************************************
  *                      Droits réservés à nous même  :)                 *
@@ -116,11 +115,9 @@ function Enregistrer() {
                             <label>J'autorise l'ISCIO à utiliser mes informations afin de communiquer avec moi au sujet des inscriptions, <br /> des formations qu'ils proposent et de diverses thématiques autour de l'apprentissage.</label>
 
                         </div>
+                        <div className="send-form-btn">Envoyer</div>
                     </div>
 
-                    <footer>
-                        ZEUB
-                    </footer>
                 </div>
 
             </div>

@@ -129,11 +129,13 @@ input[type=checkbox] {
 input[type=text] {
     width:250px;
     height: 30px;
+    font-size: 2vh;
 }
 
 input[type=email] {
     width:250px;
     height: 30px;
+    font-size: 2vh;
 }
 
 .Container_Enregistrement {
@@ -167,24 +169,21 @@ input[type=email] {
 .Option_formation {
     width: 50%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.Part1 {
-    margin-left: 15%;
-    margin-bottom: 2%;
-    width: 100%;
-    display: flex;
-}
-
-.Part2 {
-    width: 100%;
-    display: flex;
+.Part1, .Part2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 0;
 }
 
 
 .Box_Checkbox {
-    margin-left: 3%;
+   margin: 0 1vh;
 }
 
 .Milieu_Formulaire {
@@ -197,17 +196,35 @@ input[type=email] {
 .Box_Informations {
     width: 100%;
     margin-top: 3%;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .PartM1{
-    width: 30%;
+    width: 25%;
 }
 
 .Fin_Formulaire {
     margin-top: 5%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-form-btn{
+  background-color: #3CA6A6;
+  font-size: 4vh;
+  color: whitesmoke;
+  border-radius: 4px;
+  padding: 0.5vh 1.5vh;
+  margin: 2vh 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.send-form-btn:hover{
+  transform: scale(1.01);
 }
 
 .Box_Newsletter {
