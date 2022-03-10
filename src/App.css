@@ -324,4 +324,11 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   padding: 1vh;
 }
-
+.img-container{
+  background-image: url('img/cropped-Logo-ISCIO-Telephone.png');
+  height: 70px;
+  width: 430px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 4vh;
+}
