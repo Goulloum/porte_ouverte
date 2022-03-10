@@ -66,8 +66,7 @@ if($data['type'] == "add_user"){
 
     $mail = new PHPMailer(true);
 
-    try {
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    try {                    
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -90,7 +89,7 @@ if($data['type'] == "add_user"){
         $mail->AddAttachment('./tmp/Excel_file.csv', 'Excel.csv');
     
         $mail->send();
-        echo 'Message has been sent';
+        echo json_encode(TRUE);
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

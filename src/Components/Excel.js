@@ -1,6 +1,11 @@
 import axios from "axios";
+import { useRef, useState } from 'react'
 
 function Excel(){
+
+    const email = useRef();
+
+    const [confirmation, setConfirmation] = useState(false);
 
     const handleSendEmail = () =>{
         axios({
@@ -8,7 +13,7 @@ function Excel(){
                 url: 'http://localhost/porte_ouverte/query.php',
                 data: {
                     type: "excel",
-                    mail: 'math.guillemin@hotmail.fr'
+                    mail: email.current.value
                     
                 },
                 headers: {
@@ -16,15 +21,22 @@ function Excel(){
                   }
                 
             }).then((datas) => {
-                console.log(datas.data);
+                if(datas.data){
+                    setConfirmation(true);
+
+                    setTimeout(() => {
+                        setConfirmation(false);
+                    }, 10000)
+                }
             });
     }
 
 
     return(
         <div className="excel-container">
-
+            <input ref={email} type="text" placeholder="Email de destination" className="input-email-excel"/>
             <div onClick={handleSendEmail} className="excel-btn">TELECHARGER LA BASE DE DONNEE EN EXCEL</div>
+            <div style={{display: confirmation? "": "none"}} className='confirmation-msg-excel'>Fichier envoyé à votre adresse email</div>
         </div>
     )
 }
