@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mysqldb: 
+    image: mysql
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_DATABASE=porte_ouverte
+      - MYSQL_ROOT_PASSWORD=CeciEstUnMDPROOTsecure$$784523
+      - MYSQL_USER=PorteOuverte
+      - MYSQL_PASSWORD=&52&TQn2iy
+    restart: always
+    ports:
+      - 7777:3306
+    volumes:
+      - dbPorteOuverte:/var/lib/mysql
+      
+  backend: 
+    build: .
+    restart: always
+    depends_on:
+      - mysqldb
+    ports:
+      - 8080:80
+    environment:
+      - DB_HOST=mysqldb
+      - DB_NAME=porte_ouverte
+      - DB_USER=PorteOuverte
+      - DB_PASSWORD=&52&TQn2iy
+      - DB_PORT=3306
+
+
+volumes:
+  dbPorteOuverte:

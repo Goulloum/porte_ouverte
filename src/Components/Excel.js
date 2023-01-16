@@ -1,44 +1,44 @@
 import axios from "axios";
-import { useRef, useState } from 'react'
+import { useRef, useState } from "react";
 
-function Excel(){
-
+function Excel() {
     const email = useRef();
 
     const [confirmation, setConfirmation] = useState(false);
 
-    const handleSendEmail = () =>{
+    const handleSendEmail = () => {
         axios({
-            method: 'post',
-                url: 'http://localhost/porte_ouverte/query.php',
-                data: {
-                    type: "excel",
-                    mail: email.current.value
-                    
-                },
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                  }
-                
-            }).then((datas) => {
-                if(datas.data){
-                    setConfirmation(true);
+            method: "post",
+            url: "http://localhost:8080/query.php",
+            data: {
+                type: "excel",
+                mail: email.current.value,
+            },
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        }).then((datas) => {
+            if (datas.data) {
+                setConfirmation(true);
+                console.log(datas.data);
+                setTimeout(() => {
+                    setConfirmation(false);
+                }, 10000);
+            }
+        });
+    };
 
-                    setTimeout(() => {
-                        setConfirmation(false);
-                    }, 10000)
-                }
-            });
-    }
-
-
-    return(
+    return (
         <div className="excel-container">
-            <input ref={email} type="text" placeholder="Email de destination" className="input-email-excel"/>
-            <div onClick={handleSendEmail} className="excel-btn">TELECHARGER LA BASE DE DONNEE EN EXCEL</div>
-            <div style={{display: confirmation? "": "none"}} className='confirmation-msg-excel'>Fichier envoyé à votre adresse email</div>
+            <input ref={email} type="text" placeholder="Email de destination" className="input-email-excel" />
+            <div onClick={handleSendEmail} className="excel-btn">
+                TELECHARGER LA BASE DE DONNEE EN EXCEL
+            </div>
+            <div style={{ display: confirmation ? "" : "none" }} className="confirmation-msg-excel">
+                Fichier envoyé à votre adresse email
+            </div>
         </div>
-    )
+    );
 }
 
 export default Excel;
