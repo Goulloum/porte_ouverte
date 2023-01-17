@@ -15,7 +15,7 @@ services:
       - dbPorteOuverte:/var/lib/mysql
       
   backend: 
-    build: .
+    build: back/.
     restart: always
     depends_on:
       - mysqldb
@@ -28,6 +28,16 @@ services:
       - DB_PASSWORD=&52&TQn2iy
       - DB_PORT=3306
 
+
+  frontend:
+    build: front/.
+    restart: always
+    depends_on:
+      - backend
+    ports: 
+     - 3000:80
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080/
 
 volumes:
   dbPorteOuverte:
