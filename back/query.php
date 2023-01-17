@@ -4,6 +4,7 @@ header("Access-Control-Allow-Origin: *");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+use Dotenv;
 
 require 'vendor/autoload.php';
 
@@ -13,6 +14,9 @@ require 'vendor/autoload.php';
 // echo getenv("DB_PASSWORD");
 // echo getenv("DB_NAME");
 // echo getenv("DB_PORT");
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $mysqli = mysqli_connect(getenv("DB_HOST"), getenv("DB_USER"), getenv("DB_PASSWORD"), getenv("DB_NAME"), getenv("DB_PORT"));
 if (!$mysqli) {
@@ -106,8 +110,8 @@ if ($data['type'] == "add_user") {
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'guillemin.mathieu@outlook.com';                     //SMTP username
-        $mail->Password   = '&52&TQn2iy&&A8u63q5c';                               //SMTP password
+        $mail->Username   = getenv("EMAIL_USER");                     //SMTP username
+        $mail->Password   = getenv("EMAIL_PASS");                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;           //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
