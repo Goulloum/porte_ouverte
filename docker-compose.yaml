@@ -27,6 +27,8 @@ services:
       - DB_USER=PorteOuverte
       - DB_PASSWORD=&52&TQn2iy
       - DB_PORT=3306
+      - EMAIL_USER=guillemin.mathieu@outlook.com
+      - EMAIL_PASS=&52&TQn2iy&&A8u63q5c
 
 
   frontend:

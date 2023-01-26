@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
-use Dotenv;
+// use Dotenv;
 
 require 'vendor/autoload.php';
 
@@ -15,8 +15,8 @@ require 'vendor/autoload.php';
 // echo getenv("DB_NAME");
 // echo getenv("DB_PORT");
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
 
 $mysqli = mysqli_connect(getenv("DB_HOST"), getenv("DB_USER"), getenv("DB_PASSWORD"), getenv("DB_NAME"), getenv("DB_PORT"));
 if (!$mysqli) {
@@ -39,7 +39,7 @@ $requete_table = "CREATE TABLE IF NOT EXISTS `users` (
         `heure_inscription` datetime NOT NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
       ";
-
+#
 if (!$mysqli->query($requete_table)) {
     echo $mysqli->error;
 };
@@ -71,6 +71,9 @@ if ($data['type'] == "add_user") {
     if ($data['SIO']) {
         $formation .= 'SIO/';
     }
+    if ($data['GPME']) {
+        $formation .= 'GPME/';
+    }
 
     if ($data['bachelor_info']) {
         $formation .= 'Bachelor Informatique/';
@@ -78,6 +81,10 @@ if ($data['type'] == "add_user") {
     if ($data['bachelor_market']) {
         $formation .= "Bachelor Marketing/";
     }
+    if ($data['bachelor_DCG']) {
+        $formation .= "Bachelor DCG/";
+    }
+
 
     if ($data['newsletter']) {
         $com = 1;

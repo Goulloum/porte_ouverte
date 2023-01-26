@@ -18,6 +18,7 @@ WORKDIR /app
 COPY . .
 # Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
 RUN npm ci 
+RUN REACT_APP_API_URL=http://localhost:8080/
 # Build the app
 RUN npm run build
 
